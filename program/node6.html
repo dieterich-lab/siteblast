@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.70)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Switch P, Seed search with position-weight-matrices</TITLE>
+<META NAME="description" CONTENT="Switch P, Seed search with position-weight-matrices">
+<META NAME="keywords" CONTENT="program">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="program.css">
+
+<LINK REL="next" HREF="node7.html">
+<LINK REL="previous" HREF="node5.html">
+<LINK REL="up" HREF="node1.html">
+<LINK REL="next" HREF="node7.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html79"
+  HREF="node7.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html77"
+  HREF="node1.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html71"
+  HREF="node5.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html80"
+  HREF="node7.html">Switch pValue(required) and powerLimit(optional)</A>
+<B> Up:</B> <A NAME="tex2html78"
+  HREF="node1.html">SITEBLAST commandline options</A>
+<B> Previous:</B> <A NAME="tex2html72"
+  HREF="node5.html">Switch D, Distance to</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00001500000000000000">
+Switch P, Seed search with position-weight-matrices</A>
+</H3>
+If set, this option reads in a set of position-weight-matrices (PWMs, all in one file). The format of a matrix entry is shown below:
+<PRE>
+&gt;E2F-1|E2F-1  8
+0.076721890299285 0.22663524926424 0.155128754560068 0.541514105876407
+0.00183623473089011 0.0774357961198575 0.187190918506619 0.733537050642633
+0.111301251090967 0.00168889040931061 0.00168889040931061 0.885320968090412
+0.00250289974347753 0.588549446853129 0.406444753659916 0.00250289974347753
+0.00238495824006619 0.333590174989956 0.661639908529912 0.00238495824006619
+0.001729434010637 0.882689533127682 0.113851598851044 0.001729434010637
+0.001729434010637 0.113851598851044 0.882689533127682 0.001729434010637
+0.00414116507322938 0.621920691570233 0.333779304956604 0.040158838399933
+&lt;
+</PRE>
+Both sequences are scanned for matches to the set of matrices with individual background models (due to different GC-content). The algorithm tries to combine hits(seeds) from the same matrix in both sequences into anchor points. Then, alignments are built from the anchor point collection.
+
+<P>
+<BR><HR>
+<ADDRESS>
+Christoph Dieterich
+2004-12-06
+</ADDRESS>
+</BODY>
+</HTML>
