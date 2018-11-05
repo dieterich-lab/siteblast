@@ -6,16 +6,8 @@ Siteblast expands local alignment strategy for comparative sequence analysis aim
 
 Siteblast is under development.
 
-### Prerequisites
-
-Install with make
-```
-make
-make install
-```
 
 ### Installing
-
 
 ```
 make 
