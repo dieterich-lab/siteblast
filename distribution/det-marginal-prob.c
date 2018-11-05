@@ -143,18 +143,42 @@ bool calc_threshold(pssm_t *Pssm, profile_t *profile, bz_flags_t *Bz_flags){
     if(bz_flags->pValue!=DEFAULT_pUNDEF){
       ln_p=log(bz_flags->pValue/(fst?bz_flags->seqLength1:bz_flags->seqLength2));
       for(i=Max_int_range-1;i>=0&&Marginal_prob_back[i]<ln_p;i--);
-      fst?Pssm->t1:Pssm->t2=((double)i)/Multiple;
-      fst?power1:power2=exp(Marginal_prob_profil[i]);
-      fst?pValue1:pValue2=exp(Marginal_prob_back[i])*
-	(fst?bz_flags->seqLength1:bz_flags->seqLength2);
+        if (fst) {
+            Pssm->t1;
+        } else {
+            Pssm->t2 = ((double) i) / Multiple;
+        }
+        if (fst) {
+            power1;
+        } else {
+            power2 = exp(Marginal_prob_profil[i]);
+        }
+        if (fst) {
+            pValue1;
+        } else {
+            pValue2 = exp(Marginal_prob_back[i]) *
+                      (fst ? bz_flags->seqLength1 : bz_flags->seqLength2);
+        }
     }
     else if(bz_flags->power!=DEFAULT_pUNDEF){
       ln_p=log(bz_flags->power);
       for(i=Max_int_range-1;i>=0&&Marginal_prob_profil[i]<ln_p;i--);
-      fst?Pssm->t1:Pssm->t2=((double)i)/Multiple;
-      fst?power1:power2=exp(Marginal_prob_profil[i]);
-      fst?pValue1:pValue2=exp(Marginal_prob_back[i])*
-	(fst?bz_flags->seqLength1:bz_flags->seqLength2);
+        if (fst) {
+            Pssm->t1;
+        } else {
+            Pssm->t2 = ((double) i) / Multiple;
+        }
+        if (fst) {
+            power1;
+        } else {
+            power2 = exp(Marginal_prob_profil[i]);
+        }
+        if (fst) {
+            pValue1;
+        } else {
+            pValue2 = exp(Marginal_prob_back[i]) *
+                      (fst ? bz_flags->seqLength1 : bz_flags->seqLength2);
+        }
     }
     free(Marginal_prob_back+Min_int_score_back);
     free(Marginal_prob_profil+Min_int_score);
