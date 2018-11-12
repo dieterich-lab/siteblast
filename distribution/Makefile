@@ -7,6 +7,7 @@ CFLAGS= -O
 CFLAGS_interactiv=$(CFLAGS) -DTRACK_SEARCH
 CC=gcc
 
+
 BZ_SRCS=bz_main.c bz_align.c bz_extend.c bz_chain.c bz_dna.c bz_protein.c bz_print.c \
 	bz_table.c bz_census.c bz_hit19.c bz_inner.c util.c seq.c args.c \
 	edit.c dna.c charvec.c nib.c bz_site.c bz_iupac.c \
@@ -25,7 +26,7 @@ RT_SRCS=repeats_tag.c util.c
 #all: siteblast
 
 siteblast: $(BZ_SRCS) $(BZ_HEADERS)
-	$(CC) $(CFLAGS) $(BZ_SRCS) \
+	$(CC) $(CFLAGS_interactiv) $(BZ_SRCS) \
 		$(M) \
 		-lm \
 		-o $@
