@@ -157,6 +157,7 @@ bool calc_threshold(pssm_t *Pssm, profile_t *profile, bz_flags_t *Bz_flags){
 	  power2=exp(Marginal_prob_profil[i]);
 	pValue2=exp(Marginal_prob_back[i])*bz_flags->seqLength2;
 	}
+
     }
     else if(bz_flags->power!=DEFAULT_pUNDEF){
       ln_p=log(bz_flags->power);
@@ -174,6 +175,7 @@ bool calc_threshold(pssm_t *Pssm, profile_t *profile, bz_flags_t *Bz_flags){
 	  power2=exp(Marginal_prob_profil[i]);
 	  pValue2=exp(Marginal_prob_back[i])*bz_flags->seqLength2;
 	}
+
     }
     free(Marginal_prob_back+Min_int_score_back);
     free(Marginal_prob_profil+Min_int_score);
